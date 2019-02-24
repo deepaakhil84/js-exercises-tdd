@@ -7,9 +7,18 @@
 
 // calculate and return the factorial of int
 // note: factorial of 0 is 1
-
+//var fact = 1;
 function factorial(int) {
+  if (int === 0 || int === 1) {
+    return 1;
+  }
 
+  for (var i = int - 1; i > 1; i--) {
+    int = int * i;
+  }
+  return int;
 }
 
 module.exports = factorial;
+/* factorial of anumber
+n=n *(n-1) (n-2).....1*/
